@@ -59,7 +59,10 @@ function App() {
   };
 
   const handleDivNumbers = () => {
-    const div = Number(firstNumber) / Number(currentValue);
+    const div =
+      currentValue === "0"
+        ? "Error"
+        : Number(firstNumber) / Number(currentValue);
 
     setCurrentValue(`${div}`);
     setOperation("");
